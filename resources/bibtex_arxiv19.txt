@@ -1,6 +1,0 @@
-@inproceedings{zhang2019shiftinvar,
-  title={Making Convolutional Networks Shift-Invariant Again},
-  author={Zhang, Richard},
-  booktitle={arXiv},
-  year={2019}
-}

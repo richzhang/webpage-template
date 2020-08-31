@@ -65,24 +65,24 @@
 	
 	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
-		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
-		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
-		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
 		margin-left: 10px;
 		margin-right: 45px;
 	}
 
 	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
 
 		margin-left: 10px;
 		margin-right: 45px;
@@ -91,11 +91,11 @@
 
 	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
 		margin-top: 5px;
 		margin-left: 10px;
 		margin-right: 30px;
@@ -104,8 +104,8 @@
 	
 	.vert-cent {
 		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	
 	hr
@@ -117,291 +117,189 @@
 </style>
 
 <html>
-  <head>
-		<title>Making Convolutional Networks Shift-Invariant Again</title>
-		<meta property="og:image" content="https://richzhang.github.io/antialiased-cnns/resources/teaser_fb12.png"/>
-		<meta property="og:title" content="Making Convolutional Networks Shift-Invariant Again." />
-		<meta property="og:description" content="R. Zhang. In ICML 2019." />
+<head>
+	<title>This is my paper title</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75863369-6"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-		  gtag('config', 'UA-75863369-6');
-		</script>
-  </head>
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
 
-  <body>
-    <br>
-          <center>
-          	<span style="font-size:36px">Making Convolutional Networks Shift-Invariant Again</span>
-	  		  <table align=center width=600px>
-	  			  <tr>
-	  	              <td align=center width=100px>
-	  					<center>
-	  						<span style="font-size:28px"><a href="https://richzhang.github.io/">Richard Zhang</a></span><br>
-	  						<span style="font-size:22px">Adobe Research</span><br>
-	  						<!-- <span style="font-size:22px">To appear in ICML, 2019.</span><br> -->
-		  		  		</center>
-		  		  	  </td>
-		  		  </tr>
-	  			  <tr>
-		  		  </tr>
-			  </table>
-	  		  <table align=center width=600px>
-	  			  <tr>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<!-- <span style="font-size:24px"><a href='./resources/camera-ready.pdf'>[Paper]</a></span><br> -->
-	  						<span style="font-size:24px"><a href='https://arxiv.org/abs/1904.11486'>[Paper]</a></span>
-	  						<!-- <span style="font-size:18px">In ICML, 2019</span> -->
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://github.com/adobe/antialiased-cnns'>[GitHub]</a></span><br>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=HjewNBZz00w'>[Talk]</a></span><br>
-	  						<!-- <span style="font-size:18px"> Under construction</span> -->
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://www.dropbox.com/s/bzo8kia5si811tm/antialiasing_bair.pptx?dl=0'>[Slides]</a></span><br>
-	  						<!-- <span style="font-size:18px">127 MB</span> -->
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:24px"><a href="https://www.dropbox.com/s/dhf2gqt14sq76q7/poster_icml.pdf?dl=0">[Poster]</a></span><br>
-		  		  		</center>
-		  		  	  </td>
-		  		  	 </tr>
-	  			  <tr>
-			  </table>
-          </center>
-
-          <center>
-  		  <table align=center width=850px>
-  			  <tr>
-  	              <td width=260px>
-  					<center>
-  	                	<img class="round" style="width:260px" src="./resources/gifs2/video_00810.gif"/>
-	  				</center>
-  	              </td>
-  	              <td width=35px>
-  	              	&emsp;
-  	              </td>
-    	          <td width=260px>
-  					<center>
-  	                	<img class="round" style="width:260px" src="./resources/gifs2/video_12911.gif"/>
-	  				</center>
-  	              </td>
-  	              <td width=35px>
-  	              	&emsp;
-  	              </td>
-                  <td width=260px>
-  					<center>
-  	                	<img class="round" style="width:260px" src="./resources/gifs2/video_47458.gif"/>
-	  				</center>
-  	              </td>
-                </tr>
-<!--   			  <tr>
-  	              <td width=300px>
-  					<center>
-  	                	<a href='./resources/gifs/28476.gif'><img class="round" style="width:300px" src="./resources/gifs/28476.gif"/></a>
-	  				</center>
-  	              </td>
-    	          <td width=300px>
-  					<center>
-  	                	<a href='./resources/gifs/28347.gif'><img class="round" style="width:300px" src="./resources/gifs/28347.gif"/></a>
-	  				</center>
-  	              </td>
-                  <td width=300px>
-  					<center>
-  	                	<a href='./resources/gifs/35969.gif'><img class="round" style="width:300px" src="./resources/gifs/35969.gif"/></a>
-	  				</center>
-  	              </td>
-                </tr> -->
-  		  </table>
-  		  <table align=center width=850px>
-	  		  <tr>
-	  		  	<td>
-	  		  		<!-- <center> -->
-					Small shifts -- even by a single pixel -- can drastically change the output of a deep network (bars on left). We identify the cause: aliasing during downsampling. We anti-alias modern deep networks with classic signal processing, stabilizing output classifications (bars on right). We observe "free", unexpected improvements as well: accuracy increases and improved robustness.
-					<!-- </center> -->
-	  		    </td>
-	  		  </tr>
-	  		</table>
-  		</center>
-
-          <hr>
-
-<!--   		  <br>
-  		  <table align=center width=800px>
-  			  <tr>
-  	              <td width=400px>
-  					<center>
-  	                	<a href="./resources/fig1d.jpeg"><img class="" src = "./resources/fig1d.jpeg" height="400px"></img></href></a><br>
-					</center>
-  	              </td>
-                </tr>
-  		  </table>
-		  <hr> -->
-
-  		  <table align=center width=850px>
-	  		  <center><h1>Abstract</h1></center>
-	  		  <tr>
-	  		  	<td>
-					Modern convolutional networks are not shift-invariant, as small input shifts or translations can cause drastic changes in the output. Commonly used downsampling methods, such as max-pooling, strided-convolution, and average-pooling, ignore the sampling theorem. The well-known signal processing fix is anti-aliasing by low-pass filtering before downsampling. However, simply inserting this module into deep networks degrades performance; as a result, it is seldomly used today. We show that when integrated correctly, it is compatible with existing architectural components, such as max-pooling and strided-convolution. We observe <i>increased accuracy</i> in ImageNet classification, across several commonly-used architectures, such as ResNet, DenseNet, and MobileNet, indicating effective regularization. Furthermore, we observe <i>better generalization</i>, in terms of stability and robustness to input corruptions. Our results demonstrate that this classical signal processing technique has been undeservingly overlooked in modern deep networks.
-	  		    </td>
-	  		  </tr>
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="">First Author</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="">Second Author</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="">Third Author</a></span>
+						</center>
+					</td>
+				</tr>
 			</table>
-  		  <br>
-		  <hr>
-
-  		  <table align=center width=700px>
-	  		  <center><h1>Method overview</h1></center>
-  			  <tr>
-  	              <td align=center width=700px>
-  					<center>
-						  <td><img class="round" style="width:800px" src="./resources/antialias_mod.jpg"/></td>
-	  		  		</center>
-			  </tr>
-		  </center>
-		  </table>
-  		  <table align=center width=850px>
-		  	<center>
-		  		<tr>
-		  			<td>
-				  	We anti-alias modern networks with classic signal processing, making them more shift-invariant. Predominant downsampling methods ignore the Nyquist sampling theorem. We make the following replacements: <br>MaxPool&rarr;MaxBlurPool (pictured above), StridedConv&rarr;ConvBlurPool, and AvgPool&rarr;BlurPool.
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-		  <br>
-<!--   		  <table align=center width=700px>
-  			  <tr>
-  	              <td align=center width=700px>
-  					<center>
-						  <td><img class="round" style="width:800px" src="./resources/fig1e.jpg"/></td>
-	  		  		</center>
-			  </tr>
-		  </table>
-		  <br> -->
-		  <hr>
-        <center><h1>Talk</h1></center>
-        <p align="center">
-<iframe width="660" height="395" src="https://www.youtube.com/embed/HjewNBZz00w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe></p>
-
-        <!-- <br> -->
-  		  <table align=center width=800px>
-			  <br>
-			  <tr><center>
-				<span style="font-size:28px">&nbsp;<a href='https://www.dropbox.com/s/bzo8kia5si811tm/antialiasing_bair.pptx?dl=0'>[Slides]</a>
-		  </table>
-        <hr>
-
-	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
- 		<center><h1>Code and Antialiased Models</h1></center>
-
-  		  <table align=center width=420px>
-		  	<center>
-		  		<tr>
-		  			<td>
-		  				<b>ImageNet Classification (shift-invariance vs accuracy)</b>
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-  		  <table align=center width=400px>
-  			  <tr>
-  	              <td align=center width=400px>
-  					<center>
-						  <td><img class="round" style="width:450px" src="./resources/imagenet_ind2_noalex.jpg"/></td>
-						  <!-- <td><img class="round" style="width:400px" src="./resources/imagenet_agg_all.jpg"/></td> -->
-	  		  		</center>
-			  </tr>
-		  </table>
-  		  <table align=center width=850px>
-		  	<center>
-		  		<tr>
-		  			<td>
-		  	As designed, adding low-pass filtering increases <b>shift-invariance (y-axis)</b>. Surprisingly, we also observe increases in <b>accuracy (x-axis)</b>, across architectures, as well as increased robustness. We have pretrained anti-aliased models, along with instructions for making your favorite architecture more shift-invariant.
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-  		  <table align=center width=800px>
-			  <br>
-			  <tr><center>
-				<span style="font-size:28px">&nbsp;<a href='https://github.com/adobe/antialiased-cnns'>[GitHub]</a>
-		  </table>
-
-<!-- <a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel">[Model 129MB]</span> -->
-
-      	  <br>
-		  <hr>
-
-  		  <!-- <table align=center width=550px> -->
-  		  <table align=center width=490px>
-	 		<center><h1>Paper and Supplementary Material</h1></center>
-  			  <tr>
-				  <!-- <td><a href="./resources/camera-ready.pdf"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td> -->
-				  <td><a href="https://arxiv.org/abs/1904.11486"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-				  <td><span style="font-size:14pt">R. Zhang.<br>
-				  <b>Making Convolutional Networks Shift-Invariant Again.</b><br>
-				  In ICML, 2019.<br>
-				  (hosted on <a href="https://arxiv.org/abs/1904.11486">ArXiv</a>)<br>
-				  <!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				  <span style="font-size:4pt"><a href=""><br></a>
-				  </span>
-				  </td>
-  	              </td>
-              </tr>
-  		  </table>
-		  <br>
-
-		  <table align=center width=600px>
-			  <tr>
-				  <td><span style="font-size:14pt"><center>
-				  	<a href="./resources/bibtex_icml19.txt">[Bibtex]</a>
-  	              </center></td>
-              </tr>
-  		  </table>
-
-		  <hr>
-		  <br>
-		  	
-  		  <table align=center width=900px>
-  			  <tr>
-  	              <td width=400px>
-  					<left>
-	  		  <center><h1>Acknowledgements</h1></center>
-<!-- 	  		  I thank <a href="https://research.adobe.com/person/eli-shechtman/">Eli Shechtman</a>, 
-	  		  <a href="http://www.mgharbi.com/">Michaël Gharbi</a>,
-	  		  <a href="http://www.oliverwang.info/">Oliver Wang</a>,
-	  		  <a href="http://andrewowens.com/">Andrew Owens</a>, 
-	  		  <a href="https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros<a>,
-	  		  <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>, and
-	  		  <a href="http://web.mit.edu/phillipi/">Phillip Isola<a> for their helpful discussion, comments, and encouragement.
- -->
-				I am especially grateful to Eli Shechtman for helpful discussion and guidance. I also thank Michaël Gharbi and Andrew Owens for the beneficial feedback on earlier drafts. I thank labmates and mentors, past and present -- Sylvain Paris, Oliver Wang, Alexei A. Efros, Angjoo Kanazawa, Taesung Park, Phillip Isola -- for their helpful comments and encouragement.
-
-			</left>
-		</td>
-			 </tr>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href=''>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
 		</table>
+	</center>
 
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=850px>
+			<tr>
+				<td>
+					Short few sentence description of the paper. Could be omitted.
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				This is my abstract.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+	<center><h1>Talk</h1></center>
+	<p align="center">
+		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+	</p>
+
+	<table align=center width=800px>
 		<br>
+		<tr>
+			<center>
+				<span style="font-size:28px"><a href=''>[Slides]</a>
+				</span>
+			</center>
+		</tr>
+	</table>
+	<hr>
 
-              
+	<center><h1>Code</h1></center>
+
+	<table align=center width=420px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					Short description if wanted
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=800px>
+		<br>
+		<tr><center>
+			<span style="font-size:28px">&nbsp;<a href=''>[GitHub]</a>
+			</center>
+		</span>
+	</table>
+	<br>
+	<hr>
+	<table align=center width=450px>
+		<center><h1>Paper and Supplementary Material</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
+				<b>Creative and Descriptive Paper Title.</b><br>
+				In Conference, 20XX.<br>
+				(hosted on <a href="">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> for a <a href="http://richzhang.github.io/colorization/">colorful ECCV project</a>; the template can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
 </body>
 </html>
- 
+

@@ -1,6 +1,12 @@
-## <b>Making Convolutional Networks Shift-Invariant Again</b> [[Project Page]](http://richzhang.github.io/antialiased-cnns/) [[Paper]](https://arxiv.org/abs/1904.11486) [[GitHub]](https://github.com/adobe/antialiased-cnns) <br>
-[Richard Zhang](https://richzhang.github.io/). In [ICML, 2019](https://arxiv.org/abs/1904.11486).
+## <b>Webpage template</b>
 
-<img src='https://richzhang.github.io/antialiased-cnns/resources/gifs/00810.gif' align="right" width=300>
+This repository is for the webpage, originally used for [[Colorful Image Colorization. In ECCV, 2016]](http://richzhang.github.io/colorization/), made by [[Phillip Isola]](http://web.mit.edu/phillipi/).
 
-This repository is for the webpage. Please see [[this link]](https://github.com/adobe/antialiased-cnns) for code and pre-trained models.
+To use this repo, do the following. Putting a webpage into a `gh-pages` branch in your GitHub will automatically make a webpage.
+
+```
+git clone https://github.com/richzhang/webpage-template.git
+cd webpage-template
+git checkout gh-pages
+```
+
